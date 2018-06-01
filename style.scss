@@ -1,0 +1,63 @@
+//font sizes
+$big-font: 25px;
+$medium-font: 18px;
+$small-font: 14px;
+
+//colours
+$lightgrey: lightgrey;
+
+li{
+    list-style-type: none;
+    
+    &:hover{
+        background-color: $lightgrey;
+    }
+}
+
+header{
+    nav{
+        .ul {
+            .links{
+                font-size: $big-font;
+
+                > li{
+                    display: inline;
+                    position: relative;
+
+                    > .nested-links{
+                        padding-left: 0;
+                        position: absolute;
+                        left: 0;
+                        display: none;
+                        font-size: $medium-font;
+                        width: 150%;
+
+                        > li{
+                            position: relative;
+
+                            .sublinks{
+                             display: none;
+                             position: absolute;
+                             top: 0;
+                             left:100%;
+                             font-size: $small-font;
+                             width: 150%;
+                            }
+
+                            &:hover > .sublinks{
+                                display: block;
+                            }
+                        }
+                    }
+
+                    // the amperstand represents the li
+
+                    &:hover > .nested-links{
+                        display: block;
+                    }
+                }                
+            }
+        }
+    }
+}
+
