@@ -1,0 +1,47 @@
+
+$big-font:25px;
+$med-font:18px;
+$small-font:14px;
+
+li{
+    list-style-type: none;
+}
+header{
+    nav{
+        .links{
+            font-size: $big-font;
+
+            > li{
+                display: inline;
+                position: relative;
+
+                > .nested-links{
+                    padding-left: 0;
+                    position: absolute;
+                    left:0;
+                    display:none;
+                    font-size: $med-font;
+
+                    >li{
+                        position:relative;
+
+                        .sublinks{
+                            display:none;
+                            position:absolute;
+                            left:10px;
+                            top:0;
+                        }
+                        &:hover > .sublinks{
+                            display:block;
+                        }
+                    }
+                }
+                &:hover > .nested-links{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+

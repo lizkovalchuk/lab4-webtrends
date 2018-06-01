@@ -2,7 +2,7 @@ ul {
     list-style-type: none;
   }
 
-  #header-container{
-      display: inline;
+  #page-wrapper{
+      margin: 0 auto;
   }
 
